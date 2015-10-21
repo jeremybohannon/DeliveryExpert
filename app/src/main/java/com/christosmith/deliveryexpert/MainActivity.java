@@ -1,9 +1,13 @@
 package com.christosmith.deliveryexpert;
 
+import android.content.Context;
+import android.location.LocationManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,7 +16,18 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final Button button = (Button) findViewById(R.id.button);//Creates the button
+        button.setOnClickListener(new View.OnClickListener() {//Creates a listener to keep track of button status
+            @Override
+            public void onClick(View v) {
+                System.out.println("LOLOL");//Prints this out to console to test button functionality.
+
+            }
+        });
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
